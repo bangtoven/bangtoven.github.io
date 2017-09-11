@@ -5,7 +5,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "deploy": "gatsby build && cp CNAME public/ && gh-pages -d public --branch master"
   },
   "dependencies": {
     "gatsby": "^1.8.11",
@@ -22,5 +23,8 @@
     "typography-theme-kirkham": "^0.16.3",
     "typography-theme-twin-peaks": "^0.15.11",
     "typography-theme-wordpress-2016": "^0.15.10"
+  },
+  "devDependencies": {
+    "gh-pages": "^0.12.0"
   }
 }
