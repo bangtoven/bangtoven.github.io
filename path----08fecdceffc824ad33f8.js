@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{"./node_modules/json-loader/index.js!./.cache/json/layout-index.json":function(e,o){e.exports={data:{site:{siteMetadata:{title:"Jungho Bang"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----08fecdceffc824ad33f8.js.map
