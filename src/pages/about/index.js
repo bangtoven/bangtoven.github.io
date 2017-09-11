@@ -55,7 +55,12 @@ const ResumeHeader = g.header(({ theme }) => ({
 const Image = g.img(({ theme }) => ({
   ...theme.centerPadding,
   borderRadius: rhythm(0.5),
-  marginBottom: 0
+  marginBottom: 0,
+  objectFit: 'contain',
+  width: '60%',
+  align: 'right',
+  textAlign: 'center',
+  display: 'block'
 })) 
 
 
@@ -109,11 +114,11 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
     <H3>Fun facts</H3>
     <Image src={astronaut}/>
     <P>I was one of the top 400 candidates in <a href="https://en.wikipedia.org/wiki/Korean_Astronaut_Program">Korean Astronaut Program</a>.</P>
-    <img src={map}/>
-    <P>I have travelled 22 countries. In 2008, I went to Copenhagen flying over Asia. By coming back there from west crossing Atlantic to attend NIME 2017, I completed a circle around the globe!</P>
-    <img src={skydive}/>
+    <Image src={map}/>
+    <P>I have travelled 22 countries.</P>
+    <Image src={skydive}/>
     <P>I did skydiving!</P>
-    <img src={drumstick}/>
+    <Image src={drumstick}/>
     <P>I have Lars Ulrich's drumstick that I caught at Metallica's concert during their '06 tour.</P>
   </main>
 );
