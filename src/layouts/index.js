@@ -13,7 +13,13 @@ const FooterContainer = styled.footer`
   padding: 1rem 0.5rem;
 `
 
-const linkStyle = css({ float: `right` })
+const ListLink = props =>
+  <li style = {{ display: 'inline-block', marginRight: '1rem'}}>
+    <Link to={props.to}>
+      {props.children}
+    </Link>
+  </li>
+
 
 export default ({ children, data }) =>
   <g.Div
@@ -29,9 +35,10 @@ export default ({ children, data }) =>
         {data.site.siteMetadata.title}
       </g.H3>
     </Link>
-    <Link className={linkStyle} to={`/about/`}>
-      About
-    </Link>
+      <ul style={{ listStyle: 'none', float: 'right'}}>
+        <ListLink to="/projects">Projects</ListLink>
+        <ListLink to="/about">About</ListLink>
+      </ul>
     {children()}
     <FooterContainer>
       <SocialIcons flexDirection="row" width="240px"/>

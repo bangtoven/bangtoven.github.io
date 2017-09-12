@@ -1,29 +1,3 @@
-// import React from "react"
-
-// export default ( { data } ) =>
-//   <div>
-//   	<h2>About {data.site.siteMetadata.title}</h2>
-//     <p>
-      // It has been my dream to help the musicians with their creative processes with my engineering knowledge, 
-      // and also help the general public to have better access to musical tools. <br/>
-      // Through various experiences in computer music, 
-      // I learned that my passion lies with music, 
-      // and that I should continue with my studies in order to combine my engineering background 
-      // to the various needs of the contemporary music industry.
-//     </p>
-//   </div>
-
-// export const query = graphql`
-//   query AboutQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `
-
-/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 import graphql from 'graphql-tag';
@@ -34,13 +8,9 @@ import profilePic from './profile.jpg'
 import astronaut from './astronaut.jpg'
 import drumstick from './drumstick.jpg'
 import map from './map.jpg'
+import ganges from './ganges.jpg'
 import skydive from './skydive.jpg'
 // import siteShape from '../shapes/site';
-
-const maLink = <a href="https://www.youtube.com/watch?v=JvUMV1N7eGM">Massachusetts</a>;
-const ghLink = <a href="https://github.com/knpwrs">my GitHub</a>;
-const patsLink = <a href="http://www.patriots.com/">New England Patriots</a>;
-const cdpLink = <a href="http://cursordanceparty.com">Cursor Dance Party</a>;
 
 const ResumeHeader = g.header(({ theme }) => ({
   ...theme.centerPadding,
@@ -54,10 +24,10 @@ const ResumeHeader = g.header(({ theme }) => ({
 
 const Image = g.img(({ theme }) => ({
   ...theme.centerPadding,
-  borderRadius: rhythm(0.5),
-  marginBottom: 0,
+  borderRadius: rhythm(0.25),
+  marginBottom: rhythm(0.1),
   objectFit: 'contain',
-  width: '60%',
+  width: '75%',
   align: 'right',
   textAlign: 'center',
   display: 'block'
@@ -98,28 +68,34 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
             marginTop: rhythm(.5),
             marginBottom: rhythm(.5),
             width: rhythm(10),
-            height: rhythm(10),
-            borderRadius: rhythm(0.5)
+            borderRadius: rhythm(5)
           }}
         />
     <H2>About me</H2>
       <P>
       It has been my dream to help the musicians with their creative processes with my engineering knowledge, 
       and also help the general public to have better access to musical tools. <br/>
+      </P>
+      <p style={{clear:'both'}}>
       Through various experiences in computer music, 
       I learned that my passion lies with music, 
       and that I should continue with my studies in order to combine my engineering background 
       to the various needs of the contemporary music industry.
-      </P>
+      </p>
+
     <H3>Fun facts</H3>
-    <Image src={astronaut}/>
-    <P>I was one of the top 400 candidates in <a href="https://en.wikipedia.org/wiki/Korean_Astronaut_Program">Korean Astronaut Program</a>.</P>
-    <Image src={map}/>
-    <P>I have travelled 22 countries.</P>
-    <Image src={skydive}/>
-    <P>I did skydiving!</P>
-    <Image src={drumstick}/>
-    <P>I have Lars Ulrich's drumstick that I caught at Metallica's concert during their '06 tour.</P>
+      <center>
+      <Image src={astronaut}/>
+      <P>I was one of the top 400 candidates in <a target="_blank" href="https://en.wikipedia.org/wiki/Korean_Astronaut_Program">Korean Astronaut Program</a>.</P>
+      <Image src={map}/>
+      <P>I have travelled 22 countries.</P>
+      <Image src={skydive}/>
+      <P>I did skydiving.</P>
+      <Image src={drumstick}/>
+      <P>I have Lars Ulrich's drumstick that I caught at the Metallica '06 tour.</P>
+      <Image src={ganges}/>
+      <P>I bathed in the Holy Ganges.</P>
+    </center>
   </main>
 );
 

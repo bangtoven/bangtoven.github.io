@@ -9,8 +9,11 @@ export default ({ data }) => {
   return (
     <div>
       <g.H1 display={"inline-block"} borderBottom={"1px solid"}>
-        Recent projects
+        Projects
       </g.H1>
+      <h4>
+        {data.allMarkdownRemark.totalCount} Posts
+      </h4>
       {data.allMarkdownRemark.edges.map(({ node }) =>
         <div>
         	<Link
@@ -32,14 +35,18 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order:DESC}) {
+  query ProjectsQuery {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order:DESC},
+      filter:{frontmatter: {tag: {eq: "something"}}}) 
+    {
       totalCount
       edges {
         node {
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            tag
           }
           fields {
             slug
