@@ -12,7 +12,7 @@ export default ({ data }) => {
         Projects
       </g.H1>
       <h4>
-        {data.allMarkdownRemark.totalCount} Posts
+        {data.allMarkdownRemark.totalCount} posts
       </h4>
       {data.allMarkdownRemark.edges.map(({ node }) =>
         <div>

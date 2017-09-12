@@ -32,7 +32,7 @@ export default ({ children, data }) =>
         marginBottom={rhythm(2)}
         display={`inline-block`}
         fontStyle={`normal`}>
-        {data.site.siteMetadata.title}
+        Jungho!
       </g.H3>
     </Link>
       <ul style={{ listStyle: 'none', float: 'right'}}>
