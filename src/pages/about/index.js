@@ -10,6 +10,7 @@ import drumstick from './drumstick.jpg'
 import map from './map.jpg'
 import ganges from './ganges.jpg'
 import skydive from './skydive.jpg'
+import jump from './jump.gif'
 // import siteShape from '../shapes/site';
 
 const ResumeHeader = g.header(({ theme }) => ({
@@ -60,15 +61,15 @@ const Ul = g.ul(({ theme }) => ({
 const About = ({ data: { site: { siteMetadata: site } } }) => (
   <main>
     <img
-          src={profilePic}
+          src={jump}
           alt={`Jungho Bang`}
           style={{
             float: 'right',
             marginRight: rhythm(1),
             marginTop: rhythm(.5),
             marginBottom: rhythm(.5),
-            width: rhythm(10),
-            borderRadius: rhythm(5)
+            width: "70%",
+            borderRadius: rhythm(2)
           }}
         />
     <H2>About me</H2>
