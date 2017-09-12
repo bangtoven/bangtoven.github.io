@@ -1,0 +1,2 @@
+webpackJsonp([0xc1c2e49b0c8b],{"./node_modules/json-loader/index.js!./.cache/json/classes-asdf-2.json":function(e,a){e.exports={data:{markdownRemark:{html:'<p>Pandas are really sweet.</p>\n<p>Here\'s a video of a panda eating sweets.</p>\n<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>',frontmatter:{title:"Sweet Pandas Eating Sweets"}}},pathContext:{slug:"/classes/asdf 2/"}}}});
+//# sourceMappingURL=path---classes-asdf-2-444a61c1d436697ecdd8.js.map
