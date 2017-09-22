@@ -29,8 +29,8 @@ export default ({ data }) => {
         
         <g.Span color="#555">
         <p>CS grad student. iOS developer. Entrepreneur. Media artist.</p>
-        <p>On a mission to support musicians in their creative processes <br/>
-        and to bring accessible musical tools to general public.</p>
+        <p>On a mission to support the musicians in their creative processes <br/>
+        and to bring accessible musical tools to the general public.</p>
         </g.Span>
       </center>
     </div>

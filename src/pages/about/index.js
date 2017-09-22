@@ -60,34 +60,35 @@ const Ul = g.ul(({ theme }) => ({
 
 const About = ({ data: { site: { siteMetadata: site } } }) => (
   <main>
-    <img
-          src={jump}
-          alt={`Jungho Bang`}
-          style={{
-            float: 'right',
-            marginRight: rhythm(1),
-            marginTop: rhythm(.5),
-            marginBottom: rhythm(.5),
-            width: "70%",
-            borderRadius: rhythm(2)
-          }}
-        />
+    <img src={profilePic}
+      alt={`Jungho Bang`}
+      style={{
+        float: 'right',
+        marginRight: rhythm(1),
+        marginTop: 0,
+        marginBottom: rhythm(0.25),
+        width: rhythm(8),
+        borderRadius: rhythm(4)
+      }}
+    />
+    <P>
     <H2>About me</H2>
-      <P>
-      It has been my dream to help the musicians with their creative processes with my engineering knowledge, 
-      and also help the general public to have better access to musical tools. <br/>
-      </P>
-      <p style={{clear:'both'}}>
-      Through various experiences in computer music, 
-      I learned that my passion lies with music, 
-      and that I should continue with my studies in order to combine my engineering background 
-      to the various needs of the contemporary music industry.
-      </p>
+
+    It has been my dream to support the musicians with their creative processes with my engineering knowledge, 
+    and also help the general public to have better access to musical tools. <br/>
+    </P>
+    <p style={{clear:'both'}}>
+    Through various experiences in computer music, 
+    I learned that my passion lies with music, 
+    and that I should continue with my studies in order to combine my engineering background 
+    to the various needs of the contemporary music industry.
+    </p>
 
     <H3>Fun facts</H3>
       <center>
       <Image src={astronaut}/>
-      <P>I was one of the top 400 candidates in <a target="_blank" href="https://en.wikipedia.org/wiki/Korean_Astronaut_Program">Korean Astronaut Program</a>.</P>
+      <P>I was one of the top 400 candidates in <a target="_blank" href="https://en.wikipedia.org/wiki/Korean_Astronaut_Program">Korean Astronaut Program</a>,<br/>
+       which started with the screening of 36,000 applications.</P>
       <Image src={map}/>
       <P>I have travelled 22 countries.</P>
       <Image src={skydive}/>

@@ -11,28 +11,33 @@ export default ({ data }) => {
       <g.H1 display={"inline-block"} borderBottom={"1px solid"}>
         Projects
       </g.H1>
-      <h4>
-        {data.allMarkdownRemark.totalCount} posts
-      </h4>
-      {data.allMarkdownRemark.edges.map(({ node }) =>
-        <div>
-        	<Link
-            to={node.fields.slug}
-            css={{ textDecoration: `none`, color: `inherit` }}
-          >
-          <g.H3 marginBottom={rhythm(1 / 4)}>
-            {node.frontmatter.title}{" "}
-            <g.Span color="#BBB">— {node.frontmatter.date}</g.Span>
-          </g.H3>
-          <p>
-            {node.excerpt}
-          </p>
-          </Link>
-        </div>
-      )}
+      <g.H3>
+        Under construction.
+      </g.H3>
     </div>
   )
 }
+
+     //  <h4>
+     // {data.allMarkdownRemark.totalCount} posts
+     //  </h4>
+     //  {data.allMarkdownRemark.edges.map(({ node }) =>
+     //    <div>
+     //      <Link
+     //        to={node.fields.slug}
+     //        css={{ textDecoration: `none`, color: `inherit` }}
+     //      >
+     //      <g.H3 marginBottom={rhythm(1 / 4)}>
+     //        {node.frontmatter.title}{" "}
+     //        <g.Span color="#BBB">— {node.frontmatter.date}</g.Span>
+     //      </g.H3>
+     //      <p>
+     //        {node.excerpt}
+     //      </p>
+     //      </Link>
+     //    </div>
+     //  )}
+
 
 export const query = graphql`
   query ProjectsQuery {
