@@ -9,6 +9,7 @@ import HomeIcon from 'react-icons/lib/fa/home'
 import MailIcon from 'react-icons/lib/fa/envelope'
 import LinkedInIcon from 'react-icons/lib/fa/linkedin'
 import InstaIcon from 'react-icons/lib/fa/instagram'
+import YouTubeIcon from 'react-icons/lib/fa/youtube-play'
 
 const Container = styled.div`
   display: flex;
@@ -100,6 +101,17 @@ const Types = {
         <InstaIcon size={32} />
       </ExternalLink>
     )
+  },
+  youtube(props) {
+    return (
+      <ExternalLink
+        hoverColor="#fff"
+        href="https://www.youtube.com/user/bangtoven"
+        {...props}
+      >
+        <YouTubeIcon size={32} />
+      </ExternalLink>
+    )
   }
 }
 
@@ -129,6 +141,7 @@ export default function Social(props) {
     <SocialContainer {...props}>
       <SocialButton className="button" type="linkedin" {...props} />
       <SocialButton className="button" type="git" {...props} />
+      <SocialButton className="button" type="youtube" {...props} />
       <SocialButton className="button" type="instagram" {...props} />
       <SocialButton className="button" type="mail" {...props} />
     </SocialContainer>
